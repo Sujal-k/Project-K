@@ -35,8 +35,12 @@ const Hero = ({ theme }) => {
               Car Rental
             </h1>
             <p data-aos="fade-up" data-aos-delay="1000">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              veritatis explicabo quibusdam quae reprehenderit ab{" "}
+            Looking to rent a car or bike?
+Find nearby rental shops for cars and bikes with ease!
+
+The all new bikes and cars with fantastic condition, let's make driving popular!
+
+{" "}
             </p>
             <button
               data-aos="fade-up"
@@ -48,6 +52,28 @@ const Hero = ({ theme }) => {
             >
               Get Started
             </button>
+            <div className="form-section flex flex-col md:flex-row gap-4 mt-4 p-4">
+  <input 
+    type="text" 
+    placeholder="Search Location" 
+    className="border rounded px-3 py-2 w-full md:w-1/3 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+  />
+  <input 
+    type="date" 
+    className="border rounded px-3 py-2 w-full md:w-1/4 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+  />
+  <input 
+    type="date" 
+    className="border rounded px-3 py-2 w-full md:w-1/4 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+  />
+  <button 
+    className="bg-yellow-500 hover:bg-yellow-600 text-black dark:text-white px-4 py-2 rounded w-full md:w-1/6"
+  >
+    Submit
+  </button>
+</div>
+
+
           </div>
         </div>
       </div>

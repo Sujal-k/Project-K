@@ -4,19 +4,19 @@ const testimonialData = [
   {
     name: "Dilshad",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "The rental process was seamless, and the car quality exceeded my expectations!",
     aosDelay: "0",
   },
   {
     name: "Satya",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Affordable prices and great customer service. Highly recommend!",
     aosDelay: "300",
   },
   {
     name: "Sabir",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "The cars are well-maintained, and the drivers were extremely professional.",
     aosDelay: "1000",
   },
 ];

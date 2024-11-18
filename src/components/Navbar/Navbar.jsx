@@ -24,6 +24,16 @@ export const Navlinks = [
     name: "BOOKING",
     link: "/#booking",
   },
+  {
+    id:1,
+    name:"SIGN UP",
+    link:"/#signup"
+  },
+  {
+    id:2,
+    name:"LOGIN",
+    link:"/#login"
+  }
 ];
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
