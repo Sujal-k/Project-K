@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import whiteCar from "../../assets/white-car.png";
 import car2 from "../../assets/car5.png";
 import car3 from "../../assets/car6.png";
+import Bike_Ninja from '../../assets/Bike_Ninja.png';
+import Bike_Ducati from '../../assets/Bike_Ducati.png';
+import harley from '../../assets/harley.png';
+import E_Class from'../../assets/E_Class-removebg-preview.png'
+import yamaha from '../../assets/yamaha-removebg-preview.png'
+import Audi from'../../assets/Audi_A6 (2).png'
 
+// List of available cars and bikes
 const carList = [
   {
     name: "BMW UX",
@@ -10,6 +17,7 @@ const carList = [
     image: whiteCar,
     details: "Model Year: 2022 | Fuel Type: Diesel | Seats: 5 | Transmission: Automatic",
     aosDelay: "0",
+    location: "Sitabuldi",
   },
   {
     name: "KIA UX",
@@ -17,6 +25,7 @@ const carList = [
     image: car2,
     details: "Model Year: 2021 | Fuel Type: Petrol | Seats: 7 | Transmission: Manual",
     aosDelay: "500",
+    location: "Dharampeth",
   },
   {
     name: "BMW GX",
@@ -24,16 +33,72 @@ const carList = [
     image: car3,
     details: "Model Year: 2023 | Fuel Type: Hybrid | Seats: 5 | Transmission: Automatic",
     aosDelay: "1000",
+    location: "Wardha Road",
+  },
+  {
+    name: "Ducati Panigale V4",
+    price: 200,
+    image: Bike_Ducati,
+    details: "Model Year: 2023 | Fuel Type: Petrol | Engine: 1103cc | Transmission: Manual",
+    aosDelay: "1000",
+    location: "Civil Lines",
+  },
+  {
+    name: "Kawasaki Ninja H2",
+    price: 250,
+    image: Bike_Ninja,
+    details: "Model Year: 2023 | Fuel Type: Petrol | Engine: 998cc | Transmission: Manual",
+    aosDelay: "1200",
+    location: "Sadar",
+  },
+  {
+    name: "Harley-Davidson Fat Boy",
+    price: 180,
+    image: harley,
+    details: "Model Year: 2023 | Fuel Type: Petrol | Engine: 1746cc | Transmission: Manual",
+    aosDelay: "1400",
+    location: "Sitabuldi",
+  },
+  // New cars and bike added
+  {
+    name: "Audi A6",
+    price: 150,
+    image: Audi, // Add the image path for Audi A6
+    details: "Model Year: 2022 | Fuel Type: Diesel | Seats: 5 | Transmission: Automatic",
+    aosDelay: "1600",
+    location: "Sitabuldi",
+  },
+  {
+    name: "Mercedes-Benz E-Class",
+    price: 220,
+    image: E_Class,
+    details: "Model Year: 2023 | Fuel Type: Petrol | Seats: 5 | Transmission: Automatic",
+    aosDelay: "1800",
+    location: "Sadar",
+  },
+  {
+    name: "Yamaha YZF-R1",
+    price: 220,
+    image: yamaha, // Add the image path for Yamaha YZF-R1
+    details: "Model Year: 2023 | Fuel Type: Petrol | Engine: 998cc | Transmission: Manual",
+    aosDelay: "2000",
+    location: "Civil Lines",
   },
 ];
 
 const CarList = () => {
   const [showForm, setShowForm] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("All");
 
   // Toggle form visibility on button click
   const handleGetStartedClick = () => {
     setShowForm(!showForm);
   };
+
+  // Filter cars based on selected location
+  const filteredCars = selectedLocation === "All"
+    ? carList
+    : carList.filter(car => car.location === selectedLocation);
 
   return (
     <div className="pb-24">
@@ -49,10 +114,31 @@ const CarList = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor iure
           nemo ab?
         </p>
+
+        {/* Location Filter */}
+        <div className="mb-6">
+          <label htmlFor="location" className="text-lg font-semibold text-black dark:text-white">
+            Select Location:
+          </label>
+          <select
+            id="location"
+            className="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:text-white dark:border-gray-600"
+            value={selectedLocation}
+            onChange={(e) => setSelectedLocation(e.target.value)}
+          >
+            <option value="All">All Locations</option>
+            <option value="Sitabuldi">Sitabuldi</option>
+            <option value="Dharampeth">Dharampeth</option>
+            <option value="Wardha Road">Wardha Road</option>
+            <option value="Civil Lines">Civil Lines</option>
+            <option value="Sadar">Sadar</option>
+          </select>
+        </div>
+
         {/* Car listing */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
-            {carList.map((data) => (
+            {filteredCars.map((data) => (
               <div
                 key={data.name}
                 data-aos="fade-up"
