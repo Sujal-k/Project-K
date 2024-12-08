@@ -6,7 +6,7 @@ const About = () => {
     <div className="dark:bg-dark bg-slate-100 sm:min-h-[600px] sm:grid sm:place-items-center duration-300">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center">
-          <div data-aos="slide-right" data-aos-duration="1500">
+          <div>
             <img
               src={CarPng}
               alt=""
@@ -22,14 +22,14 @@ const About = () => {
                 About us
               </h1>
               <p data-aos="fade-up" className="leading-8 tracking-wide">
-              Who We Are: A trusted platform offering convenient and affordable bike and car rentals.
-What We Offer: Wide range of vehicles, flexible rental plans, and transparent pricing.
-Why Choose Us: Reliable service, easy booking, and exceptional customer support.
-Our Mission: To make travel seamless, affordable, and enjoyable for everyone.
+                Who We Are: A trusted platform offering convenient and affordable bike and car rentals.
+                What We Offer: Wide range of vehicles, flexible rental plans, and transparent pricing.
+                Why Choose Us: Reliable service, easy booking, and exceptional customer support.
+                Our Mission: To make travel seamless, affordable, and enjoyable for everyone.
               </p>
               <p data-aos="fade-up">
-              Our Mission
-              To empower our customers with the freedom to explore and travel on their terms by providing reliable, affordable, and flexible rental solutions.
+                Our Mission
+                To empower our customers with the freedom to explore and travel on their terms by providing reliable, affordable, and flexible rental solutions.
               </p>
               <button data-aos="fade-up" className="button-outline">
                 Get Started

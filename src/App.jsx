@@ -10,6 +10,7 @@ import Services from "./components/Services/Services";
 import CarList from "./components/CarList/CarList";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -55,6 +56,7 @@ const App = () => {
       <div id="car-list-section">
         <CarList selectedLocation={selectedLocation} />
       </div>
+      <Testimonial />
       <Contact />
       <Footer />
     </div>

@@ -83,7 +83,7 @@ const Hero = ({ theme, scrollToCards, setSelectedLocation }) => {
               data-aos-delay="600"
               className="text-5xl lg:text-7xl font-semibold font-serif"
             >
-              Car Rental
+              Vehicle Rental
             </h1>
             <p data-aos="fade-up" data-aos-delay="1000">
               Looking to rent a car or bike? Find nearby rental shops for cars
@@ -101,58 +101,7 @@ const Hero = ({ theme, scrollToCards, setSelectedLocation }) => {
             >
               Get Started
             </button>
-            <div className="form-section flex flex-col md:flex-row gap-4 mt-4 p-4">
-              <div className="relative w-full md:w-1/3">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search Location"
-                    className="border rounded px-3 py-2 w-full bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
-                    value={searchValue}
-                    onChange={handleInputChange}
-                    onFocus={() =>
-                      setShowDropdown(filteredLocations.length > 0)
-                    }
-                    onBlur={() =>
-                      setTimeout(() => setShowDropdown(false), 200)
-                    }
-                  />
-                  <span
-                    className="absolute top-2/4 right-4 transform -translate-y-2/4 cursor-pointer"
-                    onClick={toggleDropdown}
-                  >
-                    ▼
-                  </span>
-                </div>
-                {showDropdown && (
-                  <ul className="absolute z-10 bg-white dark:bg-gray-800 text-black dark:text-white border rounded shadow-md mt-1 w-full max-h-40 overflow-y-auto">
-                    {filteredLocations.map((location, index) => (
-                      <li
-                        key={index}
-                        className="px-3 py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
-                        onClick={() => handleSelectLocation(location)}
-                      >
-                        {location}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-              <input
-                type="date"
-                className="border rounded px-3 py-2 w-full md:w-1/4 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
-              />
-              <input
-                type="date"
-                className="border rounded px-3 py-2 w-full md:w-1/4 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
-              />
-              <button
-                className="bg-yellow-500 hover:bg-yellow-600 text-black dark:text-white px-4 py-2 rounded w-full md:w-1/6"
-                onClick={handleSubmit} // Handle form submission and scroll
-              >
-                Submit
-              </button>
-            </div>
+          
           </div>
         </div>
       </div>
